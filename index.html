@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ladies Brunch Wine & Paint</title>
+<style>
+body{margin:0;font-family:Arial;background:#fff0f4;color:#5a2a3a;text-align:center}
+.hero{background:#ff8fb1;color:white;padding:50px 20px}
+.card{background:white;margin:-30px 15px 20px;border-radius:20px;padding:25px;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
+.box{background:#fff6f8;border-radius:15px;padding:12px;margin:8px;display:inline-block;width:42%}
+.btn{display:block;width:100%;padding:16px;border-radius:30px;border:none;font-weight:bold;margin:10px 0;color:white;font-size:16px}
+.preco{background:#5a2a3a;color:white;border-radius:15px;padding:15px;margin:15px 0}
+input{width:100%;padding:12px;border-radius:12px;border:1px solid #ffb3c8;margin:6px 0}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1 style="font-size:42px;margin:0">Ladies Brunch<br>Wine & Paint</h1>
+<p>wine • paint • music<br>Soft moments, good wine e beautiful souls</p>
+<p style="background:white;color:#ff5a8a;padding:6px 15px;border-radius:20px;display:inline-block;margin-top:10px">VAGAS LIMITADAS</p>
+</div>
+<div class="card">
+<div class="box">📅<br><b>11 de Outubro</b></div>
+<div class="box">⏰<br><b>11h</b></div>
+<div class="box">📍<br><b>Nairuco</b></div>
+<div class="box">👗<br><b>Rosa e Branco</b></div>
+<div class="preco"><p>VALOR EXPERIENCIA</p><h1 style="margin:5px 0;font-size:36px">2000 MT</h1><small>Inclui vinho, brunch e materiais</small></div>
+
+<h3>Confirmar Presença</h3>
+<input id="nome" placeholder="Seu nome">
+<input id="tel" placeholder="Seu WhatsApp">
+<select id="met" style="width:100%;padding:12px;border-radius:12px;border:1px solid #ffb3c8">
+<option value="M-Pesa 84 618 2682">Pagar com M-Pesa 84 618 2682</option>
+<option value="e-Mola 85 073 0250">Pagar com e-Mola 85 073 0250</option>
+</select>
+<input id="ref" placeholder="Codigo da transacao">
+
+<button class="btn" style="background:#25D366" onclick="enviar()">Confirmar e Enviar Comprovativo no WhatsApp</button>
+
+<p style="font-size:12px;margin-top:15px">M-Pesa: 84 618 2682 - Charmila<br>e-Mola: 85 073 0250 - Charmila<br>Após pagar 2000MT envie o comprovativo</p>
+</div>
+<script>
+function enviar(){
+let n=document.getElementById('nome').value
+let t=document.getElementById('tel').value
+let m=document.getElementById('met').value
+let r=document.getElementById('ref').value
+let txt=`Ola! Quero confirmar Ladies Brunch Wine & Paint 11 Outubro Nairuco%0ANome:${n}%0ATel:${t}%0APagamento:${m}%0ARef:${r}%0AValor:2000MT`
+window.open('https://wa.me/258850730250?text='+encodeURIComponent(txt),'_blank')
+}
+</script>
+</body>
+</html>
